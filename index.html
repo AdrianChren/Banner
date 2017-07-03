@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <script type="text/javascript" src="https://cdn.scancube.com/v14/jzspin1.4.js">  </script>
+    <script type="text/javascript">
+       try{
+         $(document).ready(function (){
+             $('#scancube_jzspin').jzSpin({
+                    ldImageWidth: 350,
+                    ldImageHeight: 350,
+                    isZoomable: false,
+                    hdImageWidth: 1200,
+                    hdImageHeight: 1200,
+                    numberOfImages: 24,
+                    style: 1,
+                    magnifierSize: 300,
+                    direction:1 ,  //ckw = 0 , antickw = 1
+                    autoSpinAfter :3,
+                    rotationSpeed :9,
+                    ldImageBaseName: "ld",
+                    hdImageBaseName:"hd"
+                 })
+            });
+       } catch(err){
+          alert('Please check your Internet connection!');
+       };
+      </script>
+      <style>
+        body {
+            background-image: url("background.jpeg");
+            background-size: auto;
+            background-repeat: no-repeat;
+             }
+       </style>
+     </head>
+     <body>
+       <div id="box">
+         <div id="scancube_jzspin"></div>
+         </div>
+         <img class="cena" src="cena.png" alt="cena">
+     </body>
+</html>
